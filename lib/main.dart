@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:try_tech/src/screen/emergency/emergency_screen.dart';
 import 'package:try_tech/src/screen/pintest/pintest_screen.dart';
+import 'package:try_tech/src/screen/sliver/sliver_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: EmergencyScreen(),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: SliverScreen());
   }
 }
