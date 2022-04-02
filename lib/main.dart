@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:try_tech/src/screen/emergency/emergency_screen.dart';
 import 'package:try_tech/src/screen/pintest/pintest_screen.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: PintestScreen(),
+      home: EmergencyScreen(),
     );
   }
 }
