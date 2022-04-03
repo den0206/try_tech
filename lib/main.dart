@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:try_tech/src/screen/animate_do/animate_do_screen.dart';
+import 'package:try_tech/src/screen/animate_do/notification_screen.dart';
 import 'package:try_tech/src/screen/emergency/emergency_screen.dart';
 import 'package:try_tech/src/screen/pintest/pintest_screen.dart';
 import 'package:try_tech/src/screen/sliver/sliver_screen.dart';
@@ -17,6 +19,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: SliverScreen());
+        home: NotificationScreen());
   }
 }
