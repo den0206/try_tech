@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:try_tech/src/screen/animate_do/animate_do_screen.dart';
-import 'package:try_tech/src/screen/animate_do/notification_screen.dart';
-import 'package:try_tech/src/screen/emergency/emergency_screen.dart';
-import 'package:try_tech/src/screen/pintest/pintest_screen.dart';
-import 'package:try_tech/src/screen/sliver/sliver_screen.dart';
+import 'package:provider/provider.dart';
+
+import 'package:try_tech/src/screen/theme_changer/theme_changer_screen.dart';
+import 'package:try_tech/src/theme/theme.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeChanger(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,11 +18,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentTheme = Provider.of<ThemeChanger>(context).currentTheme;
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: NotificationScreen());
+      title: 'Flutter Demo',
+      theme: currentTheme,
+      home: ThemeChangerScreen(),
+    );
   }
 }
