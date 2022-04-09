@@ -22,7 +22,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: currentTheme,
-      home: ThemeChangerScreen(),
+      home: OrientationBuilder(
+        builder: (context, orientation) {
+          print(orientation);
+          return ThemeChangerScreen();
+        },
+      ),
     );
   }
 }
