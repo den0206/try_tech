@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:try_tech/src/screen/shoes_layout/shoes_layout_screen.dart';
 
 import 'package:try_tech/src/screen/theme_changer/theme_changer_screen.dart';
 import 'package:try_tech/src/theme/theme.dart';
@@ -24,8 +25,7 @@ class MyApp extends StatelessWidget {
       theme: currentTheme,
       home: OrientationBuilder(
         builder: (context, orientation) {
-          print(orientation);
-          return ThemeChangerScreen();
+          return ShoesLayputScreen();
         },
       ),
     );
