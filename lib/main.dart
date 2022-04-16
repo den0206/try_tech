@@ -5,6 +5,7 @@ import 'package:try_tech/src/screen/music_player/theme.dart';
 import 'package:try_tech/src/screen/shoes_layout/shoes_layout_screen.dart';
 
 import 'package:try_tech/src/screen/theme_changer/theme_changer_screen.dart';
+import 'package:try_tech/src/screen/transition/transiton_screen.dart';
 import 'package:try_tech/src/theme/theme.dart';
 
 void main() {
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: miTema,
       home: OrientationBuilder(
         builder: (context, orientation) {
-          return MusicPlayerScreen();
+          return TransitionScreen();
         },
       ),
     );
